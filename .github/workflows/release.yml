@@ -19,4 +19,4 @@ jobs:
         body: "Automatic deployment for ${{ github.sha }}"
         token: ${{ secrets.GITHUB_TOKEN }}
         commit: ${{ github.sha }}
-        tag: auto-release-latest
+        tag: 1.12.0
