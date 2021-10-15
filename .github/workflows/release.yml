@@ -1,0 +1,22 @@
+name: CreateRelease
+on: [ push, pull_request ]
+jobs:
+  bazel_build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v2
+    - name: Setup bazel
+      uses: jwlawson/actions-setup-bazel@v1
+      with:
+        bazel-version: '4.0.0'
+    - name: Build Executable
+      run: bazel build //:release
+    - name: Release
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: bazel-bin/smithy_cli.jar
+        body: "Automatic deployment for ${{ github.sha }}"
+        token: ${{ secrets.GITHUB_TOKEN }}
+        commit: ${{ github.sha }}
+        tag: auto-release-latest
