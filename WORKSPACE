@@ -23,6 +23,7 @@ maven_install(
         "software.amazon.smithy:smithy-aws-apigateway-openapi:1.12.0",
         "software.amazon.smithy:smithy-linters:1.12.0",
         "software.amazon.smithy:smithy-aws-apigateway-traits:1.12.0",
+        "software.amazon.smithy.typescript:smithy-typescript-codegen:0.7.0",
     ],
     excluded_artifacts = [],
     repositories = [

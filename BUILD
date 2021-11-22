@@ -22,6 +22,7 @@ java_library(
     exports = [
         "@maven//:software_amazon_smithy_smithy_cli",
         "@maven//:software_amazon_smithy_smithy_openapi",
+        "@maven//:software_amazon_smithy_typescript_smithy_typescript_codegen",
     ],
 )
 
