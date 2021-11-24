@@ -14,15 +14,17 @@ http_archive(
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
+SMITHY_VERSION = "1.14.0"
+
 maven_install(
     artifacts = [
-        "software.amazon.smithy:smithy-model:1.12.0",
-        "software.amazon.smithy:smithy-cli:1.12.0",
-        "software.amazon.smithy:smithy-openapi:1.12.0",
-        "software.amazon.smithy:smithy-aws-traits:1.12.0",
-        "software.amazon.smithy:smithy-aws-apigateway-openapi:1.12.0",
-        "software.amazon.smithy:smithy-linters:1.12.0",
-        "software.amazon.smithy:smithy-aws-apigateway-traits:1.12.0",
+        "software.amazon.smithy:smithy-model:%s" % SMITHY_VERSION,
+        "software.amazon.smithy:smithy-cli:%s" % SMITHY_VERSION,
+        "software.amazon.smithy:smithy-openapi:%s" % SMITHY_VERSION,
+        "software.amazon.smithy:smithy-aws-traits:%s" % SMITHY_VERSION,
+        "software.amazon.smithy:smithy-aws-apigateway-openapi:%s" % SMITHY_VERSION,
+        "software.amazon.smithy:smithy-linters:%s" % SMITHY_VERSION,
+        "software.amazon.smithy:smithy-aws-apigateway-traits:%s" % SMITHY_VERSION,
         "software.amazon.smithy.typescript:smithy-typescript-codegen:0.7.0",
     ],
     excluded_artifacts = [],

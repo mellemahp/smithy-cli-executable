@@ -19,4 +19,4 @@ jobs:
           body: "Automatic deployment for ${{ github.sha }}"
           token: ${{ secrets.GITHUB_TOKEN }}
           commit: ${{ github.sha }}
-          tag: 1.12.1
+          tag: 1.14.0
