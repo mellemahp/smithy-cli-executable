@@ -1,9 +1,8 @@
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 # import libraries from maven
-RULES_JVM_EXTERNAL_TAG = "2.8"
-
-RULES_JVM_EXTERNAL_SHA = "79c9850690d7614ecdb72d68394f994fef7534b292c4867ce5e7dec0aa7bdfad"
+RULES_JVM_EXTERNAL_TAG = "4.2"
+RULES_JVM_EXTERNAL_SHA = "cd1a77b7b02e8e008439ca76fd34f5b07aecb8c752961f9640dea15e9e5ba1ca"
 
 http_archive(
     name = "rules_jvm_external",
@@ -14,7 +13,7 @@ http_archive(
 
 load("@rules_jvm_external//:defs.bzl", "maven_install")
 
-SMITHY_VERSION = "1.14.0"
+SMITHY_VERSION = "1.26.2"
 
 maven_install(
     artifacts = [
